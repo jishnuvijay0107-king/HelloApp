@@ -9,18 +9,10 @@ public class HelloApp {
             return;
         }
 
-        // StringBuilder to build names list
-        StringBuilder nameBuilder = new StringBuilder();
+        // Use String.join() to concatenate names
+        String names = String.join(", ", args);
 
-        // Enhanced for loop
-        for (String name : args) {
-            nameBuilder.append(name).append(", ");
-        }
-
-        // Remove trailing ", "
-        if (nameBuilder.length() > 0) {
-            String names = nameBuilder.substring(0, nameBuilder.length() - 2);
-            System.out.println("Hello, " + names + "!");
-        }
+        // Print final greeting
+        System.out.println("Hello, " + names + "!");
     }
 }
